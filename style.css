@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+
 body{
   height:  auto;
   margin:0;
   padding:0;
-  min-width:1140px;
-  overflow-y:auto;
+  width:100%;
 }
 
 /* nav{
@@ -36,7 +37,6 @@ ul {
 .navbar{
   display: flex;
   justify-content: space-between;
-  margin-left:135px;
   padding-right: 15px;
 }
 li{
@@ -58,6 +58,8 @@ li a{
   height: 650px;
   width: 100%;
   margin: 0px auto;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .logo{
@@ -100,6 +102,9 @@ li a{
   padding:150px;
 
 }
+.mobile_img{
+  display: none;
+}
 
 .white_desc{
   position:absolute;
@@ -123,7 +128,7 @@ li a{
   display: flex;
   justify-content: space-between;
   margin-left: 145px;
-  margin-right: 235px;
+  margin-right: 195px;
   padding-bottom: 25px
 }
 .button1 {
@@ -143,10 +148,11 @@ li a{
   position:relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 450px, 450px;
+  grid-template-rows: 450px 450px;
   grid-row-gap: 25px;
   margin-left: 145px;
-  margin-right: 190px;
+  margin-right: 145px;
+  align-items:center;
 }
 .text_grid{
   position:absolute;
@@ -171,6 +177,7 @@ li a{
   font-family: 'Alata', sans-serif;
   color: #fff;
   font-size: 20px;
+  margin-left: 10%;
 }
 .footer-left{
   position:relative;
@@ -181,6 +188,9 @@ li a{
 }
 .nav-footer{
   position: absolute;
+  float:left;
+  bottom: 0;
+  margin-bottom: 10px;
 }
 .footer-right{
   display: flex;
@@ -259,7 +269,7 @@ p{
 @media only screen and (max-width: 376px) {
   body{
     height: auto;
-    width:100%;
+    width:auto;
     margin:0;
     padding:0;
     overflow-y:auto;
@@ -271,13 +281,15 @@ p{
     height: 1300px;
     width: 100%;
     margin: 0px auto;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .logo{
     float: left;
     font-family: 'Alata', sans-serif;
     color: #fff;
-    font-size: 35px;
+    font-size:15px;
     margin:0;
     padding:0
   }
@@ -285,18 +297,18 @@ p{
   .desc{
     position:absolute;
     top: 200px;
-    width: 600px;
-    height: 285px;
+    width: 10em;
+    height: 80px;
     border:1px solid #fff;
     float: left;
-    margin:0;
-    padding:0
+    margin-left: auto;
+    margin-right: auto;
   }
   .desc_text{
     position: relative;
     color: #fff;
     font-family: monospace;;
-    font-size: 75px;
+    font-size: 20px;
     text-align: left;
     margin: 0px auto;
     text-transform: uppercase;
@@ -306,6 +318,13 @@ p{
     padding-left: 30px; */
     margin:0;
     padding:0
+  }
+
+  .desktop_img{
+    display: none;
+  }
+  .mobile_img{
+    display:contents;
   }
 
   .description{
@@ -322,8 +341,8 @@ p{
   .white_desc{
     position:absolute;
     background-color: #fff;
-    width: 480px;
-    height: 220px;
+    width: 150px;
+    height: 100px;
     float: right;
     /* padding-top: 75px;
     padding-left: 75px;
@@ -334,15 +353,13 @@ p{
   }
   .title_whitedesc{
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 50px;
+    font-size: 25px;
     text-transform: uppercase;
   }
   .details{
     display: flex;
     justify-content: space-between;
-    margin-left: 145px;
-    margin-right: 235px;
-    padding-bottom: 25px
+    margin: 0px;
   }
   .button1 {
     background-color: white;
@@ -354,15 +371,18 @@ p{
 
   .text_details{
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 50px;
+    font-size: 20px;
     text-transform: uppercase;
   }
   .grille{
     position:relative;
     display: grid;
     grid-template-columns:654px;
-    grid-template-rows:240px, 240px, 240px, 240px, 240px, 240px, 240px, 240px,;
+    grid-template-rows:240px 240px 240px 240px 240px 240px 240px 240px;
     grid-row-gap: 25px;
+    margin-left: 0;
+    margin-right: 0;
+    align-items:center;
   }
   .text_grid{
     position:absolute;
@@ -370,7 +390,6 @@ p{
     color: #ddd;
     font-size: 35px;
     text-transform: uppercase;
-    padding-left: 40px;
     bottom: 20px;
   }
   .footer{
@@ -379,7 +398,7 @@ p{
     height: 5%;
     width: 100%;
     margin-top: 50px;
-    grid-template-columns: 600px 1fr;
+    grid-template-columns: 100px 1fr;
     grid-template-rows: auto;
   }
   .logo-footer{
@@ -427,42 +446,49 @@ p{
     width:  654px;
     height: 240px;
     background-image: url("./images/mobile/image-deep-earth.jpg");
+    background-size: contain;
   }
   .img2{
     position: relative;
     width:  654px;
     height: 240px;
     background-image: url("./images/mobile/image-night-arcade.jpg");
+    background-size: contain;
   }
   .img3{
     position: relative;
     width:  654px;
     height: 240px;
     background-image: url("./images/mobile/image-soccer-team.jpg");
+    background-size: contain;
   }
   .img4{
     position: relative;
     width:  654px;
     height: 240px;
     background-image: url("./images/mobile/image-grid.jpg");
+    background-size: contain;
   }
   .img5{
     position: relative;
     width:  654px;
     height: 240px;
     background-image: url("./images/mobile/image-from-above.jpg");
+    background-size: contain;
   }
   .img6{
     position: relative;
     width:  654px;
     height: 240px;
     background-image: url("./images/mobile/image-pocket-borealis.jpg");
+    background-size: contain;
   }
   .img7{
     position: relative;
     width:  654px;
     height: 240px;
     background-image: url("./images/mobile/image-curiosity.jpg");
+    background-size: contain;
   }
 
   .img8{
@@ -470,5 +496,6 @@ p{
     width:  654px;
     height: 240px;
     background-image: url("./images/mobile/image-fisheye.jpg");
+    background-size: contain;
   }
 }
